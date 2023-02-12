@@ -1,6 +1,6 @@
 package com.masai;
 
-import java.util.Currency;
+
 
 public class LinkedListImpl {
 	Node head;
@@ -101,13 +101,17 @@ public class LinkedListImpl {
 		list.add(10);
 		list.add(20);
 		list.add(30);
-//		list.prinList();
-//		list.addBeg(05);
-//		list.prinList();
-//		list.addTail(30);
-//		list.prinList();
-//		list.addAfterEle(10,15);
-//		list.prinList();
+		list.prinList();
+
+		list.addBeg(05);
+		list.prinList();
+
+		list.addTail(30);
+		list.prinList();
+
+		list.addAfterEle(10,15);
+		list.prinList();
+
 		list.addBeforeEle(20, 15);
 		list.addBeforeEle(30, 25);
 		list.prinList();
