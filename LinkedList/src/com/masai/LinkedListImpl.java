@@ -103,6 +103,20 @@ public class LinkedListImpl {
 		head.next = null;
 		head=temp;
 	}
+
+	// delete from last
+	
+	public void deleteAtTail(){
+		
+		Node curr = head;
+		Node prev = null ;
+		while(curr.next!=null){
+			prev  = curr;
+			curr= curr.next;
+		}
+		prev.next = null;
+		
+	}
 		
 	public static void main(String[] args) {
 		LinkedListImpl list = new LinkedListImpl();
@@ -122,8 +136,11 @@ public class LinkedListImpl {
 
 		// list.addBeforeEle(20, 15);
 		// list.addBeforeEle(30, 25);
-		
+
 		// list.deleteBeg();
+
+
+		list.deleteAtTail();
 		list.prinList();
 	}
 
