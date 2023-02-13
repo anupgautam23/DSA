@@ -95,25 +95,35 @@ public class LinkedListImpl {
 			prev.next=temp;
 			temp.next=curr;
 		}
+
+	// delete from beginning
+	
+	public void deleteBeg(){
+		Node temp = head.next;
+		head.next = null;
+		head=temp;
+	}
 		
 	public static void main(String[] args) {
 		LinkedListImpl list = new LinkedListImpl();
 		list.add(10);
 		list.add(20);
 		list.add(30);
-		list.prinList();
+		// list.prinList();
 
-		list.addBeg(05);
-		list.prinList();
+		// list.addBeg(05);
+		// list.prinList();
 
-		list.addTail(30);
-		list.prinList();
+		// list.addTail(30);
+		// list.prinList();
 
-		list.addAfterEle(10,15);
-		list.prinList();
+		// list.addAfterEle(10,15);
+		// list.prinList();
 
-		list.addBeforeEle(20, 15);
-		list.addBeforeEle(30, 25);
+		// list.addBeforeEle(20, 15);
+		// list.addBeforeEle(30, 25);
+		
+		// list.deleteBeg();
 		list.prinList();
 	}
 
