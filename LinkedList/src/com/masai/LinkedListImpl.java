@@ -117,12 +117,54 @@ public class LinkedListImpl {
 		prev.next = null;
 		
 	}
+	
+	//delete particular element
+
+	public void deleteParticular(int ele){
+		Node prev = null; 
+		Node curr = head;
+		while(curr.data!=ele){
+			prev=curr;
+			curr=curr.next;
+		}
+		if(prev==null){
+			head =curr.next;
+			curr.next=null;
+		}else{
+		prev.next =curr.next;
+		}
+	}
+
+	// delete before particular element
+	public void deleteBeforeEle(int ele){
+		Node pprev= null;
+		Node prev = null ; 
+		Node curr = head;
 		
+		// while(curr.data!=ele){
+		// 	pprev =prev;
+		// 	prev=curr;
+		// 	curr=curr.next;
+		// }
+		// if(pprev==null){
+		// 	head=curr;
+		// 	prev.next=null;
+		// }else{
+		// 	if(prev==null){
+
+		// 	}
+		// }
+
+	}
 	public static void main(String[] args) {
 		LinkedListImpl list = new LinkedListImpl();
 		list.add(10);
 		list.add(20);
 		list.add(30);
+		list.add(40);
+		list.add(50);
+		list.add(60);
+
 		// list.prinList();
 
 		// list.addBeg(05);
@@ -140,7 +182,12 @@ public class LinkedListImpl {
 		// list.deleteBeg();
 
 
-		list.deleteAtTail();
+		// list.deleteAtTail();
+		// list.deleteParticular(20);
+		// list.prinList();
+		list.deleteParticular(20);
+		list.deleteParticular(10);
+		list.deleteParticular(30);
 		list.prinList();
 	}
 
